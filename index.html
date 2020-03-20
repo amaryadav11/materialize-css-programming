@@ -9,16 +9,266 @@
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <style>
+        header {
+            background: url(img/pasta.jpg);
+            /* occupy all width */
+            background-size: cover;
+            background-position: center;
+            min-height: 1000px;
+        }
 
+        .section {
+            /* view width relative to screen width */
+            padding-top: 4vw;
+            padding-bottom: 4vw;
+            ;
+        }
 
+        .tabs .indicator {
+            background-color: indigo;
+        }
+
+        .tabs .tab a:focus,
+        .tabs .tab a:focus.active {
+            background: transparent;
+        }
+
+        @media screen and (max-width: 670px) {
+            header {
+                min-height: 500px;
+            }
+        }
+    </style>
 </head>
 
 <body>
+    <!-- navbar -->
+    <header>
+        <!-- apply bg image to header -->
+        <nav class="nav-wrapper transparent">
+            <div class="container">
+                <a href="" class="brand-logo">Brand Logo</a>
+                <a href="" class="sidenav-trigger" data-target="mobile-menu">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#photos">Photos</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#form">Form</a></li>
+                    <li><a href="#" data-tooltip="notifications" class=" tooltipped btn-floating btn-small indigo darjen-4">
+                        <i class="material-icons" style="font-size: 15px;">notifications</i>
+                    </a></li>
+                </ul>
+                <ul class="sidenav grey lighten-2" id="mobile-menu">
+                    <li><a href="#">Link1</a></li>
+                    <li><a href="#">Link1</a></li>
+                    <li><a href="#">Link1</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- image grid -->
+    <!-- section add a margin on top -->
+    <section class="container section scrollspy" id="photos">
+        <div class="row">
+            <div class="col s12 l4">
+                <!-- responsive-img makes image to take width of the container in this case col  -->
+                <img src="img/pasta.jpg" class="responsive-img" lalt="">
+            </div>
+            <div class="col s12 l6 offset-l1">
+                <h2 class="indigo-text text-darken-4">Portrait</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque fugit, voluptatum ipsa sapiente,
+                    eos accusamus non delectus dolores voluptate magni nam! Nemo adipisci fugit voluptatibus eos,
+                    assumenda sequi dolorem ipsam!</p>
+            </div>
 
+        </div>
+        <div class="row">
+            <div class="col s12 l4 push-l7 offset-l1">
+                <!-- responsive-img makes image to take width of the container in this case col  -->
+                <img src="img/pasta.jpg" class="responsive-img materialboxed" lalt="" height="100%">
+            </div>
+            <div class="col s12 l6 pull-l5 right-align">
+                <h2 class="indigo-text text-darken-4">Portrait</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque fugit, voluptatum ipsa sapiente,
+                    eos accusamus non delectus dolores voluptate magni nam! Nemo adipisci fugit voluptatibus eos,
+                    assumenda sequi dolorem ipsam!</p>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col s12 l4">
+                <!-- responsive-img makes image to take width of the container in this case col  -->
+                <img src="img/pasta.jpg" class="responsive-img" lalt="">
+            </div>
+            <div class="col s12 l6 offset-l1">
+                <h2 class="indigo-text text-darken-4">Portrait</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque fugit, voluptatum ipsa sapiente,
+                    eos accusamus non delectus dolores voluptate magni nam! Nemo adipisci fugit voluptatibus eos,
+                    assumenda sequi dolorem ipsam!</p>
+            </div>
+
+        </div>
+    </section>
+    <!-- parallax -->
+    <div class="parallax-container">
+        <div class="parallax">
+            <img src="img/pasta.jpg" class="responsive-img" alt="">
+        </div>
+    </div>
+    <!-- services tabs -->
+    <section class="container section scrollspy" id="services">
+        <div class="row">
+            <div class="col s12 l4">
+                <h2 class="indigo-text text-darken-4">
+                    what i do..
+                </h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam ipsum, deleniti vitae inventore
+                    vero, fuga nostrum est ad voluptatum voluptatibus eligendi iste debitis sed enim, molestiae error.
+                    Reiciendis, delectus molestiae?</p>
+            </div>
+            <!-- parent container -->
+            <div class="col s12 l6 offset-l2">
+                <!-- tabs -->
+                <ul class="tabs">
+                    <li class="tab col s6">
+                        <a href="#programming" class="indigo-text text-darken-4">programming</a>
+                    </li>
+                    <li class="tab col s6">
+                        <a href="#gaming" class="indigo-text text-darken-4">gaming</a>
+                    </li>
+                </ul>
+                <!-- take all 12 parts of parent container -->
+                <div class="col s12" id="programming">
+                    <p class="flow-text indigo-text text-darken-4">Programming</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, nemo architecto dolore ipsa sunt
+                        delectus voluptates iure soluta adipisci neque, nihil incidunt facere officia quis, repellendus
+                        optio itaque nisi nobis.</p>
+                </div>
+                <div class="col s12" id="gaming">
+                    <p class="flow-text indigo-text text-darken-4">Gamming</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, nemo architecto dolore ipsa sunt
+                        delectus voluptates iure soluta adipisci neque, nihil incidunt facere officia quis, repellendus
+                        optio itaque nisi nobis.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- parallax -->
+    <div class="parallax-container">
+        <div class="parallax">
+            <img src="img/pasta.jpg" class="responsive-img" alt="">
+        </div>
+    </div>
+    <!-- contact form -->
+    <section class="container section scrollspy" id="form">
+        <div class="row">
+            <div class="col s12 l5">
+                <h2 class="indigo-text text-darken-4">Forms</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam, commodi ut esse sunt similique ea amet
+                    dolorem a voluptas perspiciatis quos qui enim vero harum omnis alias? Qui, quod nisi.</p>
+            </div>
+            <div class="col s12 l5 offset-l2">
+                <form action="">
+                    <div class="input-field">
+                        <i class="material-icons prefix">email</i>
+                        <input type="email" id="email">
+                        <!-- for -> id -->
+                        <label for="email">Your mail</label>
+                    </div>
+                    <div class="input-field">
+                        <i class="material-icons prefix">message</i>
+                        <textarea name="" id="message" class="materialize-textarea"></textarea>
+                        <label for="message">your message</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" id="date" class="datepicker">
+                        <label for="date">choose a date</label>
+                    </div>
+                    <div class="input-field">
+                        <p>Check boxes</p>
+                        <p>
+                            <label>
+                                <input type="checkbox">
+                                <span>programming</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input type="checkbox">
+                                <span>gaming</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input type="checkbox">
+                                <span>riding bike</span>
+                            </label>
+                        </p>
+                    </div>
+                    <div class="input-field center">
+                        <button type="submit" class="btn-small">Submit</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer class="page-footer grey darken-3">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 l6">
+                    <h5>
+                        About me
+                    </h5>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio laborum perferendis rerum beatae
+                        tempore possimus nobis libero, quam numquam! Corrupti, aperiam maiores. Sunt atque quia enim
+                        optio aspernatur, veritatis eius.</p>
+                </div>
+                <div class="col s12 l4 offset-l2">
+                    <h5>Connect</h5>
+                    <ul>
+                        <li>
+                            <a href="#" class="grey-text text-lighten-3">Github</a>
+                        </li>
+                        <li>
+                            <a href="#" class="grey-text text-lighten-3">Google</a>
+                        </li>
+                        <li>
+                            <a href="#" class="grey-text text-lighten-3">Github</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright grey darken-4">
+            <div class="container center-align">&copy;2020 Amar</div>
+        </div>
+    </footer>
 
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            console.log('document ready');
+            $('.sidenav').sidenav();
+            $('.materialboxed').materialbox();
+            $('.parallax').parallax();
+            $('.tabs').tabs();
+            $('.datepicker').datepicker({
+                disableWeekends: true
+            });
+            $('.tooltipped').tooltip();
+            $('.scrollspy').scrollSpy();
+
+        })
+    </script>
 </body>
+
 
 </html>
